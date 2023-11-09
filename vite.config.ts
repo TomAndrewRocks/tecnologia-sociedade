@@ -1,12 +1,20 @@
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import path from "path";
+import { defineConfig } from "vite";
+import { resolve } from "path";
+import { ViteMinifyPlugin } from "vite-plugin-minify";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), ViteMinifyPlugin({})],
   resolve: {
     alias: {
-      "@/": path.resolve(__dirname, "src"),
+      "@": "/src",
+    },
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        file1: resolve(__dirname, "index.html"),
+      },
     },
   },
 });
