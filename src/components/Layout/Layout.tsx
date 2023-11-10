@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { colors } from "@/styles/foundation";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -18,6 +17,4 @@ const Container = styled.div`
   padding: 0;
   margin: 0;
   width: 100%;
-  background-color: ${colors.black};
 `;
-

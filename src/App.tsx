@@ -3,10 +3,11 @@ import { Footer } from "@/components/Footer/Footer";
 import { Layout } from "@/components/Layout/Layout";
 import { Title } from "@/components/Title/Title";
 import { Hero } from "@/components/Hero/Hero";
-import Separator from "./components/Separator/Separator";
+import Separator from "@/components/Separator/Separator";
 import styled from "styled-components";
-import { devices } from "./styles/foundation";
-import { TextMediaBlock } from "./components/Block/TextMediaBlock";
+import { devices } from "@/styles/foundation";
+import { TextMediaBlock } from "@/components/Block/TextMediaBlock";
+import DroneCard from "@/components/Card/DroneCard";
 
 const news = [
   {
@@ -54,6 +55,29 @@ export const App = () => {
           />
         ))}
       </NewsContainer>
+      <Separator />
+      <TextMediaBlock
+        shouldReverse={true}
+        text="Neste trabalho iremos abordar uma idéia que veio para facilitar a vida de consumidores e até mesmo poder ajudar pessoas em situação de risco. O projeto se chama “A entrega do futuro”, onde temos pequenas aeronaves, ou popularmente conhecidas como Drones que são movidas a energia solar para contribuir na velocidade de transporte de encomendas, reduzir o impacto ambiental com combustiveis fosseis promovendo a sustentabilidade através de energia limpa e renovavel e auxiliar na segurança de entregadores como veículos tais como motocicletas durante os dias corridos de muitas entregas, engarrafamento e várias outras adversidades."
+        image={
+          "https://lottie.host/eda3e55f-bdf6-419f-be59-88ee5b26b7e8/rliAOxECnO.json"
+        }
+      />
+      <Separator />
+      <DroneCard
+        image={
+          "https://lottie.host/484fffb9-bc25-4530-b9b7-93dfcd6b2707/Gsfmp0qRUa.json"
+        }
+        title="Protagonista da empreitada, o drone será o principal elemento de todo o fluxo."
+      />
+      <DroneCard
+        image="https://lottie.host/e642b64b-02a2-4653-a1e4-fdb6a249077d/0PJCsVWdwL.json"
+        title="Alimentado por energia sustentável e limpa trazendo durabilidade na eficiência."
+      />
+      <DroneCard
+        image="https://lottie.host/1f693087-affe-4849-abc1-3a9097bdaf5e/hOyGwYpEo3.json"
+        title="Trazendo segurança, satisfação e jogando no time do meio ambiente!"
+      />
       <Footer />
     </Layout>
   );

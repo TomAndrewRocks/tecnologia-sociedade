@@ -1,5 +1,8 @@
 export const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
-    <div>Footer</div>
-  )
-}
+    <footer>
+      <p>Brasil | {currentYear}</p>
+    </footer>
+  );
+};

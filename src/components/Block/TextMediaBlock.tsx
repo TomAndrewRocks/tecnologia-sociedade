@@ -5,19 +5,35 @@ import styled from "styled-components";
 interface TMBProps {
   text: string;
   image: string | object;
+  shouldReverse?: boolean;
 }
 
 export const TextMediaBlock = (props: TMBProps) => {
   return (
     <Container>
-      <p>{props.text}</p>
-      <Player
-        src={props.image}
-        className="player"
-        loop
-        autoplay
-        style={{ height: "110%", width: "110%" }}
-      />
+      {!props.shouldReverse ? (
+        <>
+          <p>{props.text}</p>
+          <Player
+            src={props.image}
+            className="player"
+            loop
+            autoplay
+            style={{ height: "110%", width: "110%" }}
+          />
+        </>
+      ) : (
+        <>
+          <Player
+            src={props.image}
+            className="player"
+            loop
+            autoplay
+            style={{ height: "  100%", width: " 100%" }}
+          />
+          <p>{props.text}</p>
+        </>
+      )}
     </Container>
   );
 };
@@ -32,7 +48,7 @@ const Container = styled.div`
   padding: 20px;
   border-radius: 20px;
   margin: 50px 0;
-
+ gap: 50px;
   p {
     text-align: justify;
     color: ${colors.black};
