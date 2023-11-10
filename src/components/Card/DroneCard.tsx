@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { devices } from "@/styles/foundation";
 import { Player } from "@lottiefiles/react-lottie-player";
